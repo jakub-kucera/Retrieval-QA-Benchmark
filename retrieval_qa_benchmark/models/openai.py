@@ -62,7 +62,8 @@ class GPT(RemoteLLM):
     def build(
         cls,
         name: str = "text-davinci-003",
-        api_base: str = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
+        # api_base: str = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
+        api_base: str = os.getenv("OPENAI_API_BASE", "http://localhost:11434/v1/"),
         api_key: str = os.getenv("OPENAI_API_KEY", ""),
         system_prompt: Optional[str] = None,
         run_args: Optional[Dict[str, Any]] = None,
