@@ -1,0 +1,11 @@
+# type: "chatgpt35"
+type: "remote-llm"
+args:
+  name: "llama3"
+  api_key: "ollama"
+  system_prompt: ""
+run_args:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 30
+  stop: "\n\n"

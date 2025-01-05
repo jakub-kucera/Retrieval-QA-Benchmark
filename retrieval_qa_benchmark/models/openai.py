@@ -17,10 +17,11 @@ class RemoteLLM(BaseLLM):
     @classmethod
     def build(
         cls,
-        name: str = "llama2-13b-chat",
-        api_base: str = os.getenv("OPENAI_API_BASE", ""),
+        # name: str = "llama2-13b-chat",
+        name: str = "llama3",
+        api_base: str = os.getenv("OPENAI_API_BASE", "http://localhost:11434/v1/"),
         api_key: str = os.getenv(
-            "OPENAI_API_KEY", "sk-some-super-secret-key-you-will-never-know"
+            "OPENAI_API_KEY", "ollama"
         ),
         system_prompt: Optional[str] = None,
         run_args: Optional[Dict[str, Any]] = None,
@@ -56,7 +57,7 @@ class RemoteLLM(BaseLLM):
                 continue
 
 
-@REGISTRY.register_model("gpt35")
+@REGISTRY.register_model("gpt")
 class GPT(RemoteLLM):
     @classmethod
     def build(
@@ -79,7 +80,7 @@ class GPT(RemoteLLM):
         )
 
 
-@REGISTRY.register_model("chatgpt35")
+@REGISTRY.register_model("chatgpt")
 class ChatGPT(GPT):
     def generate(
         self,

@@ -1,5 +1,5 @@
-# type: "chatgpt35"
-type: "remote-llm"
+#type: "remote-llm"
+type: "chatgpt"
 args:
   name: "gpt-3.5-turbo"
   api_key: "sk-some-super-secret-key-you-will-never-know"

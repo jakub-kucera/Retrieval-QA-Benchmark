@@ -2,6 +2,11 @@ evaluator:
   type: mcsa
   outfile: mmlu-hybrid.jsonl
   dataset: !include datasets/mmlu.yaml
-  model: !include models/chatgpt35.yaml
+#  dataset:
+#    - type: mmlu
+#      args:
+#        subset: all
+#  model: !include models/chatgpt35.yaml
+  model: !include models/llama3.yaml
   # model: !include models/tgi-copy.yaml
   
